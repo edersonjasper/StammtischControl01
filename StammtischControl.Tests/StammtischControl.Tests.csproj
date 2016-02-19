@@ -32,8 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\lib\FluentAssertion\FluentAssertions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -48,14 +54,20 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StammtischControl\StammtischControl.csproj">
-      <Project>{5203AF34-736D-4028-93E7-72606013F178}</Project>
-      <Name>StammtischControl</Name>
-    </ProjectReference>
+    <Folder Include="Integracao\Controller\" />
+    <Folder Include="Integracao\Entidade\CadastroGeral\" />
+    <Folder Include="Integracao\Persistencia\" />
+    <Folder Include="Integracao\Views\" />
+    <Folder Include="Unidade\Controller\" />
+    <Folder Include="Unidade\Entidade\CadastroGeral\" />
+    <Folder Include="Unidade\Persistencia\" />
+    <Folder Include="Unidade\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
